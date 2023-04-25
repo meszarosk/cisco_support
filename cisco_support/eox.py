@@ -1,25 +1,24 @@
 import requests
 from cisco_support import utils
 
-class EoX:
 
+class EoX:
     __headers = None
     __verify = None
     __proxies = None
 
     def __init__(self, key: str, secret: str, verify: bool = True, proxies: dict = None) -> None:
-
         self.__verify = verify
         self.__proxies = proxies
 
-        token = utils.getToken(key, secret, verify, proxies)      
+        token = utils.getToken(key, secret, verify, proxies)
 
         self.__headers = {
             'Authorization': f'Bearer {token}',
             'Accept': 'application/json'
         }
 
-    def getByDates(self, startDate:str, endDate: str, pageIndex: int = 1, eoxAttrib: list = []) -> dict:
+    def getByDates(self, startDate: str, endDate: str, pageIndex: int = 1, eoxAttrib: list = []) -> dict:
         """getByDates
 
         Args:
@@ -62,7 +61,7 @@ class EoX:
 
         return r.json()
 
-    def getBySerialNumbers(self,serialNumber: list , pageIndex: int = 1) -> dict:
+    def getBySerialNumbers(self, serialNumber: list, pageIndex: int = 1) -> dict:
         """getBySerialNumbers
 
         Args:
@@ -83,7 +82,7 @@ class EoX:
 
         return r.json()
 
-    def getBySoftwareReleaseStrings(self, software: list , pageIndex:int = 1) -> dict:
+    def getBySoftwareReleaseStrings(self, software: list, pageIndex: int = 1) -> dict:
         """getBySoftwareReleaseStrings
 
         Args:
@@ -99,7 +98,7 @@ class EoX:
 
         for i, sw in enumerate(software):
             params.update({
-                f'input{i+1}': sw
+                f'input{i + 1}': sw
             })
 
         url = f'https://apix.cisco.com/supporttools/eox/rest/5/EOXBySWReleaseString/{pageIndex}'

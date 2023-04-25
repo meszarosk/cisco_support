@@ -1,18 +1,17 @@
 import requests
 from cisco_support import utils
 
-class PI:
 
+class PI:
     __headers = None
     __verify = None
     __proxies = None
 
     def __init__(self, key: str, secret: str, verify: bool = True, proxies: dict = None) -> None:
-
         self.__verify = verify
         self.__proxies = proxies
 
-        token = utils.getToken(key, secret, verify, proxies)      
+        token = utils.getToken(key, secret, verify, proxies)
 
         self.__headers = {
             'Authorization': f'Bearer {token}',

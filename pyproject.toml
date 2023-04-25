@@ -1,5 +1,18 @@
-[build-system]
-requires = [
-    "setuptools",
-    "wheel"
+[project]
+name = "cisco_support_API"
+version = "0.0.1"
+authors = [
+  { name="Karoly Mesyaros", email="meszaros.karoly@bitmen.hu" },
 ]
+description = "Python implementation of the Cisco Support APIs"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/meszarosk/cisco_support"
+"Bug Tracker" = "https://github.com/meszarosk/cisco_support/issues"

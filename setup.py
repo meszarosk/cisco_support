@@ -7,16 +7,16 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setuptools.setup(
-    name="cisco_support",
-    version="0.3.1",
-    author="Dennis Roth",
-    author_email="rothdennis92@gmail.com",
+    name="cisco_support_API",
+    version="0.0.1",
+    author="Karoly Meszaros",
+    author_email="meszaros.karoly@bitmen.hu",
     description="Python implementation of the Cisco Support APIs",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rothdennis/cisco_support",
+    url="https://github.com/meszarosk/cisco_support",
     project_urls={
-        "Bug Tracker": "https://github.com/rothdennis/cisco_support/issues",
+        "Bug Tracker": "https://github.com/meszarosk/cisco_support/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -25,5 +25,5 @@ setuptools.setup(
     ],
     package_dir={"": "."},
     packages=setuptools.find_packages(where="."),
-    python_requires=">=3.6",
+    python_requires=">=3.11",
 )
