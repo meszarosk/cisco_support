@@ -36,7 +36,7 @@ class EoX:
             'responseencoding': 'json'
         }
 
-        url = f'https://api.cisco.com/supporttools/eox/rest/5/EOXByDates/{pageIndex}/{startDate}/{endDate}'
+        url = f'https://apix.cisco.com/supporttools/eox/rest/5/EOXByDates/{pageIndex}/{startDate}/{endDate}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -57,7 +57,7 @@ class EoX:
 
         productID = ','.join(productID)
 
-        url = f'https://api.cisco.com/supporttools/eox/rest/5/EOXByProductID/{pageIndex}/{productID}'
+        url = f'https://apix.cisco.com/supporttools/eox/rest/5/EOXByProductID/{pageIndex}/{productID}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -78,7 +78,7 @@ class EoX:
 
         serialNumber = ','.join(serialNumber)
 
-        url = f'https://api.cisco.com/supporttools/eox/rest/5/EOXBySerialNumber/{pageIndex}/{serialNumber}'
+        url = f'https://apix.cisco.com/supporttools/eox/rest/5/EOXBySerialNumber/{pageIndex}/{serialNumber}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -102,7 +102,7 @@ class EoX:
                 f'input{i+1}': sw
             })
 
-        url = f'https://api.cisco.com/supporttools/eox/rest/5/EOXBySWReleaseString/{pageIndex}'
+        url = f'https://apix.cisco.com/supporttools/eox/rest/5/EOXBySWReleaseString/{pageIndex}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()

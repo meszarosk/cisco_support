@@ -23,7 +23,7 @@ class RMA:
         params = {
         }
 
-        url = f'https://api.cisco.com/return/v1.0/returns/rma_numbers/{rma_numbers}'
+        url = f'https://apix.cisco.com/return/v1.0/returns/rma_numbers/{rma_numbers}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -36,7 +36,7 @@ class RMA:
             'sortBy': sortBy
         }
 
-        url = f'https://api.cisco.com/return/v1.0/returns/users/user_ids/{user_ids}'
+        url = f'https://apix.cisco.com/return/v1.0/returns/users/user_ids/{user_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()

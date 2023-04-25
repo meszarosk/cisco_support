@@ -26,7 +26,7 @@ class SS:
 
         productIds = ','.join(productIds)
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/software/productIds/{productIds}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/software/productIds/{productIds}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -38,7 +38,7 @@ class SS:
 
         productIds = ','.join(productIds)
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/releases/productIds/{productIds}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/releases/productIds/{productIds}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -63,7 +63,7 @@ class SS:
             'pageIndex': pageIndex
         }
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/compatible/productId/{productId}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/compatible/productId/{productId}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -75,7 +75,7 @@ class SS:
 
         mdfIds = ','.join(mdfIds)
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/software/mdfIds/{mdfIds}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/software/mdfIds/{mdfIds}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -87,7 +87,7 @@ class SS:
 
         mdfIds = ','.join(mdfIds)
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/releases/mdfIds/{mdfIds}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/releases/mdfIds/{mdfIds}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -112,7 +112,7 @@ class SS:
             'supportedHardware': supportedHardware
         }
 
-        url = f'https://api.cisco.com/software/suggestion/v2/suggestions/compatible/mdfId/{mdfId}'
+        url = f'https://apix.cisco.com/software/suggestion/v2/suggestions/compatible/mdfId/{mdfId}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()

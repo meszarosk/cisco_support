@@ -26,7 +26,7 @@ class PI:
 
         serial_numbers = ','.join(serial_numbers)
 
-        url = f'https://api.cisco.com/product/v1/information/serial_numbers/{serial_numbers}'
+        url = f'https://apix.cisco.com/product/v1/information/serial_numbers/{serial_numbers}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -38,7 +38,7 @@ class PI:
 
         product_ids = ','.join(product_ids)
 
-        url = f'https://api.cisco.com/product/v1/information/product_ids/{product_ids}'
+        url = f'https://apix.cisco.com/product/v1/information/product_ids/{product_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -50,7 +50,7 @@ class PI:
 
         product_ids = ','.join(product_ids)
 
-        url = f'https://api.cisco.com/product/v1/information/product_ids/{product_ids}'
+        url = f'https://apix.cisco.com/product/v1/information/product_ids/{product_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()

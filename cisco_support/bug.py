@@ -24,7 +24,7 @@ class Bug:
 
         bug_ids = ','.join(bug_ids)
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/bug_ids/{bug_ids}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/bug_ids/{bug_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -38,7 +38,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/products/product_id/{base_pid}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/products/product_id/{base_pid}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -52,7 +52,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/products/product_id/{base_pid}/software_releases/{software_releases}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/products/product_id/{base_pid}/software_releases/{software_releases}'
 
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
@@ -69,7 +69,7 @@ class Bug:
 
         keyword = ','.join(keyword)
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/keyword/{keyword}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/keyword/{keyword}'
         
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
@@ -86,7 +86,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/product_series/{product_series}/affected_releases/{affected_releases}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/product_series/{product_series}/affected_releases/{affected_releases}'
         
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
@@ -103,7 +103,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/product_series/{product_series}/fixed_in_releases/{fixed_in_releases}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/product_series/{product_series}/fixed_in_releases/{fixed_in_releases}'
         
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
@@ -120,7 +120,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/product_name/{product_name}/affected_releases/{affected_releases}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/product_name/{product_name}/affected_releases/{affected_releases}'
         
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
@@ -137,7 +137,7 @@ class Bug:
             'sort_by': sort_by
         }
 
-        url = f'https://api.cisco.com/bug/v2.0/bugs/product_name/{product_name}/fixed_in_releases/{fixed_in_releases}'
+        url = f'https://apix.cisco.com/bug/v2.0/bugs/product_name/{product_name}/fixed_in_releases/{fixed_in_releases}'
         
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 

@@ -25,7 +25,7 @@ class SNI:
 
         sr_no = ','.join(sr_no)
 
-        url = f'https://api.cisco.com/sn2info/v2/coverage/status/serial_numbers/{sr_no}'
+        url = f'https://apix.cisco.com/sn2info/v2/coverage/status/serial_numbers/{sr_no}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -37,7 +37,7 @@ class SNI:
 
         instance_no = ','.join(instance_no)
 
-        url = f'https://api.cisco.com/sn2info/v2/coverage/summary/instance_numbers/{instance_no}'
+        url = f'https://apix.cisco.com/sn2info/v2/coverage/summary/instance_numbers/{instance_no}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -49,7 +49,7 @@ class SNI:
 
         sr_no = ','.join(sr_no)
 
-        url = f'https://api.cisco.com/sn2info/v2/coverage/summary/serial_numbers/{sr_no}'
+        url = f'https://apix.cisco.com/sn2info/v2/coverage/summary/serial_numbers/{sr_no}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -60,7 +60,7 @@ class SNI:
 
         sr_no = ','.join(sr_no)
 
-        url = f'https://api.cisco.com/sn2info/v2/identifiers/orderable/serial_numbers/{sr_no}'
+        url = f'https://apix.cisco.com/sn2info/v2/identifiers/orderable/serial_numbers/{sr_no}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -71,7 +71,7 @@ class SNI:
 
         sr_no = ','.join(sr_no)
 
-        url = f'https://api.cisco.com/sn2info/v2/coverage/owner_status/serial_numbers/{sr_no}'
+        url = f'https://apix.cisco.com/sn2info/v2/coverage/owner_status/serial_numbers/{sr_no}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()

@@ -12,6 +12,11 @@ Python implementation of the [Cisco Support API](https://developer.cisco.com/doc
 
 The Cisco Support APIs remove barriers to enterprise automation and can help end users shorten sales cycles and reduce operating expenses. This new way of delivering support information empowers customers and partners to use Cisco data in new and innovative ways to increase productivity and add new value to their business. The beauty of this approach is in its flexibility. Specifically, the Support APIs leverage Cisco's strength in delivering rich knowledge while providing options to customers and partners as to how they want to consume it. In addition, the Cisco Support API foundation provides the reference for future customer-facing and partner-facing web services and applications that will enable customers and partners to more effectively support Cisco products, networks and applications within their own business processes and systems.
 
+A fork had to be created as Cisco API registration for applications created before 1 March 2023 expired at the end of March.
+
+For apps created before 1 March 2023, the client ID and secret expire on 30 September 2023. For Cisco API, the token URL and API endpoint URL have changed.
+
+https://apiconsole.cisco.com/docs/read/overview/Migrating_Applications
 # Getting Started
 
 ## Overview

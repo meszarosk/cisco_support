@@ -31,7 +31,7 @@ class ASD:
             "perPage": perPage
         }
         
-        url = 'https://api.cisco.com/software/v4.0/metadata/pidrelease'
+        url = 'https://apix.cisco.com/software/v4.0/metadata/pidrelease'
 
         r = requests.post(url=url, params=data, headers=self.__headers, verify=self.__verify, proxies=self.__proxies)
 

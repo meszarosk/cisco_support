@@ -27,7 +27,7 @@ class Case:
 
         case_ids = ','.join(case_ids)
 
-        url = f'https://api.cisco.com/case/v3/cases/case_ids/{case_ids}'
+        url = f'https://apix.cisco.com/case/v3/cases/case_ids/{case_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         print(r.content)
@@ -37,7 +37,7 @@ class Case:
     def getCaseDetails(self, case_id: str) -> dict:
         params = {}
 
-        url = f'https://api.cisco.com/case/v3/cases/details/case_id/{case_id}'
+        url = f'https://apix.cisco.com/case/v3/cases/details/case_id/{case_id}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -53,7 +53,7 @@ class Case:
 
         contract_ids = ','.join(contract_ids)
 
-        url = f'https://api.cisco.com/case/v3/cases/contracts/contract_ids/{contract_ids}'
+        url = f'https://apix.cisco.com/case/v3/cases/contracts/contract_ids/{contract_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
@@ -69,7 +69,7 @@ class Case:
 
         user_ids = ','.join(user_ids)
 
-        url = f'https://api.cisco.com/case/v3/cases/users/user_ids/{user_ids}'
+        url = f'https://apix.cisco.com/case/v3/cases/users/user_ids/{user_ids}'
         r = requests.get(url=url, headers=self.__headers, params=params, verify=self.__verify, proxies=self.__proxies)
 
         return r.json()
